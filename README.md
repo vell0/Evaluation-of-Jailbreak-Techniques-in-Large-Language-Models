@@ -29,17 +29,6 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 
 4. **Defense Implications**: Current alignment approaches successfully address direct instruction-following exploits but fail to address authority bias vulnerabilities.
 
-## Data
-
-### Forbidden Questions Dataset
-
-We use the TrustAIRLab Forbidden Question Set to evaluate the effectiveness of jailbreaking techniques. This dataset comprises 390 questions across 13 harmful categories derived from OpenAI's usage policy.
-
-```python
-from datasets import load_dataset
-
-forbidden_questions = load_dataset("TrustAIRLab/forbidden_question_set", split="train")
-```
 
 ### Jailbreak Prompts
 
@@ -96,7 +85,7 @@ for scenario, metrics in results.items():
 ### Custom Evaluation
 
 ```python
-from coding_v7 import UnifiedEvaluator
+from main_code import UnifiedEvaluator
 from llama import Llama70BInterface
 
 # Initialize evaluator
