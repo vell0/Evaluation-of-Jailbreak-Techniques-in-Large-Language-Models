@@ -91,7 +91,7 @@ Statistics of evaluated jailbreak prompts:
 from coding_v7 import UnifiedEvaluator, run_full_test_with_llama
 
 # Run full evaluation on Llama-70B
-results = run_full_test_with_llama(test_size=20, dan_prompts_limit=20)
+results = run_full_test_with_llama(test_size=30, dan_prompts_limit=30)
 
 # Print results summary
 for scenario, metrics in results.items():
@@ -193,20 +193,3 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Citation
-
-If you find this useful in your research, please consider citing:
-
-```bibtex
-@thesis{jailbreaking2025,
-  title={Jailbreaking Techniques for LLMs: A Systematic Evaluation Framework},
-  author={Author, A.},
-  year={2025},
-  school={University Name},
-  note={INCIBE SPRINT C063/23 project}
-}
-```
-
-## License
-
-This project is licensed under the terms of the MIT license. See LICENSE for more details.
