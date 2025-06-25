@@ -11,10 +11,6 @@ In this project, we develop a comprehensive framework to systematically evaluate
 
 **Disclaimer: This repository contains examples of harmful language. Reader discretion is recommended. This repo is intended for research purposes only. Any misuse is strictly prohibited.**
 
-## Research Context
-
-This framework was developed within the context of INCIBE's strategic SPRINT (Security and Privacy in Systems with Artificial Intelligence) C063/23 project, funded by the EU–NextGenerationEU through the Spanish government's Recovery, Transformation and Resilience Plan.
-
 ## Key Findings
 
 Our evaluation reveals several critical insights about LLM vulnerabilities:
