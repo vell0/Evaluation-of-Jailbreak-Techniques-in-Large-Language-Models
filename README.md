@@ -58,10 +58,11 @@ Statistics of evaluated jailbreak prompts:
 
 ```
 .
-├── coding_v7.py              # Main implementation file with UnifiedEvaluator class
+├── main_code.py              # Main implementation file with UnifiedEvaluator class
 ├── requirements.txt          # Python dependencies
 ├── datasets/                 # Dataset storage
-│   └── selected_dan_prompts.csv  # Curated DAN jailbreak prompts
+│   └── selected_dan_prompts.csv  # Curated DAN jailbreak prompts after selection
+    └── forbidden_question_set.csv # 390 forbidden question dataset
 ├── models/                   # Model interface implementations
 │   ├── chatglm.py            # ChatGLM interface for evaluation model
 │   ├── vicuna.py             # Vicuna model interface
@@ -70,20 +71,17 @@ Statistics of evaluated jailbreak prompts:
 │   └── gemma.py              # Gemma model interface
 ├── utils/                    # Utility functions and helpers
 │   ├── common.py             # Shared utility functions
-│   ├── resource_tracker.py   # Performance monitoring tools
+│   ├── config.py             # Shared utility functions
 │   └── system_template.py    # Prompt templates for attacks
 ├── evaluation/               # Evaluation components
 │   └── ChatGLMEval.py        # Evaluation model implementation
-├── results/                  # Storage for evaluation results
-│   └── README.md             # Results directory description
-└── docs/                     # Documentation
-    └── thesis.pdf            # Full research thesis
+
 ```
 
 ### Loading Models and Running Evaluations
 
 ```python
-from coding_v7 import UnifiedEvaluator, run_full_test_with_llama
+from main_code import UnifiedEvaluator, run_full_test_with_llama
 
 # Run full evaluation on Llama-70B
 results = run_full_test_with_llama(test_size=30, dan_prompts_limit=30)
