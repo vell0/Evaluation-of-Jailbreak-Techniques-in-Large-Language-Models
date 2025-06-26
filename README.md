@@ -39,8 +39,7 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 ├── datasets/                       # Dataset scripts (not datasets themselves)
 │   ├── README.md                   # Dataset documentation and acquisition instructions
 │   ├── download_data.py            # Script to download from official sources
-│   ├── process_dan_prompts.py      # Script for DAN prompt selection and filtering
-│   └── citation_generator.py       # Script for generating citation-based prompts
+│   ├── process_dan_prompts.py      # Script for DAN prompt selection and filtering│
 ├── models/                         # Model interface implementations
 │   ├── chatglm.py                  # ChatGLM interface for evaluation model
 │   ├── vicuna.py                   # Vicuna model interface
