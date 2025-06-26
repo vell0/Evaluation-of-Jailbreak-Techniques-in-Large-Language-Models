@@ -53,10 +53,9 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 ├── results/                        # Directory for saving evaluation outputs
 │   ├── .gitignore                  # Excludes actual results from repository
 │   └── README.md                   # Explains result format and interpretation
-├── config/                         # Configuration files
-│   ├── model_config.json           # Model configurations
-│   └── evaluation_config.json      # Evaluation parameters
-
+└── config/                         # Configuration files
+    ├── model_config.json           # Model configurations
+    └── evaluation_config.json      # Evaluation parameters
 ## Dataset Information
 
 This repository **does not** include the full dataset of test cases due to licensing constraints. Instead, we provide:
