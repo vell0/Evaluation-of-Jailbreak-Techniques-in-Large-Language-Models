@@ -1,9 +1,4 @@
-Here's the raw markdown code for your datasets/README.md file:
-markdown# Dataset Processing
 
-This directory contains scripts for acquiring, processing, and generating the test cases for jailbreak evaluation. Due to licensing constraints, we do not include the actual datasets in this repository.
-
-## Source Datasets
 
 To reproduce our results, you'll need to obtain these datasets from their official sources:
 
