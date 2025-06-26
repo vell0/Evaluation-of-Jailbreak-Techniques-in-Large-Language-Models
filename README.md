@@ -29,8 +29,8 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 
 4. **Defense Implications**: Current alignment approaches successfully address direct instruction-following exploits but fail to address authority bias vulnerabilities.
 
-## Repository Structure
-.├── main_code.py                    # Main implementation with UnifiedEvaluator class
+.
+├── main_code.py                    # Main implementation with UnifiedEvaluator class
 ├── requirements.txt                # Python dependencies
 ├── LICENSE                         # MIT License file                   
 ├── datasets/                       # Dataset scripts (not datasets themselves)
@@ -56,7 +56,6 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 ├── config/                         # Configuration files
 │   ├── model_config.json           # Model configurations
 │   └── evaluation_config.json      # Evaluation parameters
-
 
 ## Dataset Information
 
