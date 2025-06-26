@@ -8,7 +8,6 @@ This is the official repository for the thesis "Jailbreaking Techniques for LLMs
 
 In this project, we develop a comprehensive framework to systematically evaluate how vulnerability patterns in Large Language Models (LLMs) evolve with increasing model scale, revealing critical insights into scale-dependent security weaknesses.
 
-![Comparative ASR metrics](./figures/comparative_metrics.png)
 
 **Disclaimer: This repository contains examples of harmful language. Reader discretion is recommended. This repo is intended for research purposes only. Any misuse is strictly prohibited.**
 
@@ -34,9 +33,7 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 .
 ├── main_code.py                    # Main implementation with UnifiedEvaluator class
 ├── requirements.txt                # Python dependencies
-├── LICENSE                         # MIT License file
-├── CITATION.cff                    # Citation file format for academic attribution
-├── NOTICE.md                       # Notice about data licensing constraints
+├── LICENSE                         # MIT License file                   
 ├── datasets/                       # Dataset scripts (not datasets themselves)
 │   ├── README.md                   # Dataset documentation and acquisition instructions
 │   ├── download_data.py            # Script to download from official sources
@@ -60,18 +57,7 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 ├── config/                         # Configuration files
 │   ├── model_config.json           # Model configurations
 │   └── evaluation_config.json      # Evaluation parameters
-├── examples/                       # Example code and notebooks
-│   ├── minimal_evaluation.ipynb    # Jupyter notebook with minimal example
-│   ├── visualization.ipynb         # Notebook for visualizing results
-│   └── custom_model.py             # Example of adding a new model interface
-├── docs/                           # Documentation directory
-│   ├── installation.md             # Detailed setup instructions
-│   ├── dataset_info.md             # Dataset documentation
-│   ├── evaluation_metrics.md       # Explanation of metrics and interpretation
-│   └── figures/                    # Figures and diagrams
-└── figures/                        # Visualization figures used in README
-├── comparative_metrics.png     # Comparative ASR visualization
-└── technique_advantage.png     # Technique advantage by category
+
 
 ## Dataset Information
 
@@ -92,7 +78,7 @@ To reproduce our results:
 3. Run `datasets/process_dan_prompts.py` to select and filter DAN prompts
 4. Use the framework for evaluation as described below
 
-For researchers interested in accessing our processed dataset for non-commercial academic purposes, please contact the author directly via email: [author@institution.edu].
+For researchers interested in accessing our processed dataset for non-commercial academic purposes, please contact the author.
 
 ## Jailbreak Techniques
 
