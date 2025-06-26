@@ -53,12 +53,7 @@ Our evaluation reveals several critical insights about LLM vulnerabilities:
 │   └── system_template.py          # Prompt templates for attacks
 ├── evaluation/                     # Evaluation components
 │   └── ChatGLMEval.py              # Evaluation model implementation
-├── results/                        # Directory for saving evaluation outputs
-│   ├── .gitignore                  # Excludes actual results from repository
-│   └── README.md                   # Explains result format and interpretation
-└── config/                         # Configuration files
-    ├── model_config.json           # Model configurations
-    └── evaluation_config.json      # Evaluation parameters
+
 ```
 ## Dataset Information
 
