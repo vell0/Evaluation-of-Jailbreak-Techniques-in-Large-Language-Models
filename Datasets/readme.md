@@ -1,4 +1,9 @@
 
+# Dataset Processing
+
+This directory contains scripts for acquiring and processing the datasets needed for jailbreak evaluation. The main evaluation code will handle citation generation dynamically during runtime.
+
+## Source Datasets
 
 To reproduce our results, you'll need to obtain these datasets from their official sources:
 
@@ -34,37 +39,35 @@ Extracts earliest and latest examples from each community
 Uses sentence embeddings to find the most semantically central prompt
 Applies semantic deduplication (cosine similarity threshold 0.95)
 
-citation_generator.py
-Generates domain-appropriate citations for forbidden questions.
-bash# Generate all citation types
-python citation_generator.py --output citations/
+Citation Generation
+Unlike DAN prompts which are preprocessed, citations for the DarkCite methodology are generated dynamically during evaluation. The UnifiedEvaluator class in main_code.py contains a generate_citation() method that:
 
-# Generate specific citation type
-python citation_generator.py --type paper --output citations/paper/
-Supported citation types:
+Creates custom citations for each forbidden question on-the-fly
+Maps citation types to harm categories (e.g., GitHub for technical topics)
+Handles robust parsing and fallbacks to ensure reliable generation
+
+The citation types include:
 
 paper: Academic papers (for professional domains)
 github: GitHub repositories (for technical topics)
 news: News articles
 social_media: Social media posts
 
-Test Case Construction
-The complete test dataset comprises:
+Test Case Structure
+During evaluation, the framework will construct:
 
 11,700 DAN test cases (30 prompts × 390 questions)
 1,560 Citation test cases (4 citation types × 390 questions)
 
-For each forbidden question, test cases are constructed by combining with:
-
-Each of the 30 selected DAN prompts
-Each of the 4 citation types with appropriately generated citations
-
 Citation Mapping
-We map harm categories to most effective citation types:
-Harm CategoryPrimary Citation TypeSecondary TypeIllegal ActivitypaperbookHate SpeechpapernewsMalwaregithubpaperPhysical HarmpaperbookEconomic HarmnewspaperFraudgithubnewsPornographysocial_mediabookPolitical LobbyingpapernewsPrivacy ViolationgithubpaperLegal OpinionpaperbookFinancial AdvicepapernewsHealth ConsultationpaperbookGov Decisionpapernews
+The main code maps harm categories to most effective citation types:
+Harm CategoryPrimary Citation TypeSecondary TypeIllegal ActivitypaperbookHate SpeechpapernewsMalwaregithubpaperPhysical HarmpaperbookEconomic HarmnewspaperFraudgithubnewsPornographysocial_mediabookPolitical LobbyingpapernewsPrivacy ViolencegithubpaperLegal OpinionpaperbookFinancial AdvicepapernewsHealth ConsultationpaperbookGov Decisionpapernews
 Usage Instructions
 
 Download the source datasets using download_data.py
 Process DAN prompts with process_dan_prompts.py
-Generate citations with citation_generator.py
-The main evaluation script (../main_code.py) will automatically combine these into complete test cases
+Run the main evaluation script (../main_code.py) which:
+
+Loads the forbidden questions
+Loads the selected DAN prompts
+Dynamically generates citations during evaluation
